@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
@@ -17,6 +18,7 @@
     "strict": true,
     "target": "esnext"
   },
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "babel.config.js",

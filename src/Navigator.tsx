@@ -5,9 +5,9 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 
-import HomeScreen from './screens/Home';
+import HomeScreen from 'screens/Home';
 
-import { HOME_PAGE_ROUTE } from './constants/routes';
+import { HOME_PAGE_ROUTE } from 'constants/routes';
 
 const Stack = createNativeStackNavigator();
 
