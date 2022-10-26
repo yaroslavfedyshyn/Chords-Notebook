@@ -1,6 +1,7 @@
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import themes from 'themes';
+
 import styles from './styles';
 
 export interface IFabAddButtonPropTypes {

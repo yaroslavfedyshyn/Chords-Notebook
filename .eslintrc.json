@@ -16,6 +16,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["App.tsx"],
   "rules": {
     "import/no-unresolved": 0,
     "react/react-in-jsx-scope": "off",
@@ -24,9 +25,12 @@
     "react/jsx-filename-extension": [1, {
       "extensions": [
         ".ts",
-        ".tsx"
+        ".tsx",
+        ".js",
+        ".jsx"
       ]
     }],
+    "react/function-component-definition": 0,
     "prettier/prettier": [
       "error",
       {

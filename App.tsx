@@ -1,5 +1,5 @@
 import Navigator from './src/Navigator';
 
-export default function App() {
+export default () => {
   return <Navigator />;
 }

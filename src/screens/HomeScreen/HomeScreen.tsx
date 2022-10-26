@@ -1,9 +1,11 @@
 import { View, Text } from 'react-native';
 
-export default function Home() {
+import styles from './styles';
+
+export default () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Home Screen</Text>
     </View>
   );
-}
+};

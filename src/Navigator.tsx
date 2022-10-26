@@ -5,7 +5,7 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 
-import HomeScreen from 'screens/Home';
+import HomeScreen from 'screens/HomeScreen';
 
 import { HOME_PAGE_ROUTE } from 'constants/routes';
 
@@ -16,12 +16,13 @@ type TRouteParams = {
   component: FunctionComponent;
   options?: NativeStackNavigationOptions;
 };
+const hideHeader = () => null;
 const routes: Array<TRouteParams> = [
   {
     name: HOME_PAGE_ROUTE,
     component: HomeScreen,
     options: {
-      header: () => null,
+      header: hideHeader,
     },
   },
 ];
