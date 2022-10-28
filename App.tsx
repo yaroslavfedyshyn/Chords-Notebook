@@ -1,5 +1,5 @@
-import Navigator from './src/Navigator';
+import MainNavigator from 'navigation/stacks/main';
 
 export default () => {
-  return <Navigator />;
+  return <MainNavigator />;
 }

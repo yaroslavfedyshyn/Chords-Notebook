@@ -1,11 +1,33 @@
-import { View, Text } from 'react-native';
+import { useCallback, useMemo } from 'react';
+import { View } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import CommonPageLayout from 'layouts/CommonPageLayout';
+
+import FabAddButton from 'components/FabAddButton';
+
+import { TAllStackProps } from 'navigation/stacks/main/types';
+import { SONG_FORM_ROUTE } from 'navigation/stacks/main/routes';
 
 import styles from './styles';
 
-export default () => {
+export interface IHomeScreenPropTypes
+  extends NativeStackScreenProps<TAllStackProps> {}
+
+export default (props: IHomeScreenPropTypes) => {
+  const { navigation } = props;
+
+  const onAddPress = useCallback(() => {
+    navigation.push(SONG_FORM_ROUTE);
+  }, [navigation]);
+
+  const fabButtonNode = useMemo(() => {
+    return <FabAddButton onPress={onAddPress} />;
+  }, [onAddPress]);
+
   return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-    </View>
+    <CommonPageLayout fabNode={fabButtonNode}>
+      <View style={styles.container} />
+    </CommonPageLayout>
   );
 };
